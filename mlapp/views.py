@@ -15,7 +15,7 @@ import joblib
 
 class WineView(APIView):
 
-	def post(self, request, *args, **kwargs):
+	def get(self, request, *args, **kwargs):
 		model_path = os.getcwd()+'\\model.joblib'
 		scaler_path = os.getcwd()+'\\scaler.joblib'
 		print(model_path)
