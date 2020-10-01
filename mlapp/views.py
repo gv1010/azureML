@@ -15,7 +15,7 @@ import joblib
 
 class WineView(APIView):
 
-	def get(self, request, *args, **kwargs):
+	def post(self, request, *args, **kwargs):
 		model_path = os.getcwd()+'\\model.joblib'
 		scaler_path = os.getcwd()+'\\scaler.joblib'
 		print(model_path)
@@ -27,7 +27,6 @@ class WineView(APIView):
 		loaded_model = joblib.load(model_path)
 		scaler = joblib.load(scaler_path)
 		df = request.data
-		
 		print(request.data)
 		print(list(map(float,list(df.values()))))
 		unit = np.array(list(map(float,list(df.values()))))
