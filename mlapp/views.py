@@ -19,8 +19,8 @@ class WineView(APIView):
 		return Response(["Success"])
 		
 	def post(self, request, *args, **kwargs):
-		model_path = os.getcwd()+'\\model.joblib'
-		scaler_path = os.getcwd()+'\\scaler.joblib'
+		model_path = os.getcwd()+'/model.joblib'
+		scaler_path = os.getcwd()+'/scaler.joblib'
 		print()
 		#serializer = WineSerializers(data=request.data)
 		#serializer.is_valid()
